@@ -1,0 +1,22 @@
+# Default ignored files
+/shelf/
+.idea/
+
+# CMakeLists.txt 
+/CMakeLists.txt
+
+# Object files
+*.o
+
+# Skeleton
+*.skel.h
+
+# Persistence files
+commands.txt
+sessions.txt
+
+# Vmlinux Header
+vmlinux.h
+
+sshtrack
+

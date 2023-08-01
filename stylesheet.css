@@ -1,0 +1,27 @@
+body {
+    background-color: #dcdcdc;
+    color: #1c1c1c;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #1c1c1c;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #5fffaf;
+    color: #1c1c1c;
+}
+
+table tr:hover {
+    background-color: #00963d;
+}
