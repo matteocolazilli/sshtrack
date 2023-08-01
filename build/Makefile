@@ -4,8 +4,9 @@ ARCH = $(shell uname -m | sed 's/x86_64/x86/' | sed 's/aarch64/arm64/')
 BPF_OBJ = ${TARGET:=.bpf.o}
 USER_C = ../src/${TARGET:=.c}
 USER_SKEL = ../include/${TARGET:=.skel.h}
+VMLINUX_H = ../include/vmlinux.h
 
-all: $(TARGET) $(BPF_OBJ)
+all: $(TARGET) $(BPF_OBJ) $(VMLINUX_H)
 .PHONY: all
 
 $(TARGET): $(USER_C) $(USER_SKEL)
@@ -22,8 +23,8 @@ $(TARGET): $(USER_C) $(USER_SKEL)
 $(USER_SKEL): $(BPF_OBJ)
 	bpftool gen skeleton $< > $@
 
-vmlinux.h:
-	bpftool btf dump file /sys/kernel/btf/vmlinux format c > ../include/vmlinux.h
+$(VMLINUX_H):
+	bpftool btf dump file /sys/kernel/btf/vmlinux format c > $@
 
 install:
 	sudo cp ./sshtrack /usr/bin/
