@@ -1,5 +1,5 @@
-#include "vmlinux.h"
-#include "sshtrack.h"
+#include "../include/vmlinux.h"
+#include "../include/sshtrack.h"
 #include <bpf/bpf_endian.h>
 #include <bpf/bpf_helpers.h>
 #include <bpf/bpf_core_read.h>

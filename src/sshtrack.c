@@ -18,8 +18,8 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-#include "sshtrack.h"
-#include "sshtrack.skel.h"
+#include "../include/sshtrack.h"
+#include "../include/sshtrack.skel.h"
 
 #define SSHD_PORT 22
 #define MAX_JSON_LEN 708
