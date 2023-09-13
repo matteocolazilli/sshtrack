@@ -2,9 +2,6 @@
 /shelf/
 .idea/
 
-# CMakeLists.txt 
-/CMakeLists.txt
-
 # Object files
 *.o
 
